@@ -53,11 +53,14 @@ namespace Kruskal
         {
             int[,] cost =
             {
-                {Int32.MaxValue, 1, 7, 9,6},
-                {1, Int32.MaxValue, 13, Int32.MaxValue, 8},
-                {7, 13, Int32.MaxValue, 2, Int32.MaxValue},
-                {9, Int32.MaxValue, 2, Int32.MaxValue,11},
-                {6, 8, Int32.MaxValue, 11, Int32.MaxValue}
+                {Int32.MaxValue, 2, 2, Int32.MaxValue, 7, Int32.MaxValue, Int32.MaxValue, Int32.MaxValue},
+                {2, Int32.MaxValue, 2, 9, 2, Int32.MaxValue,Int32.MaxValue,Int32.MaxValue},
+                {2, 2, Int32.MaxValue, Int32.MaxValue, 5, Int32.MaxValue,Int32.MaxValue,Int32.MaxValue},
+                {Int32.MaxValue, 9, Int32.MaxValue, Int32.MaxValue, 10, 5, 2,16},
+                {7, 2, 5, 10, Int32.MaxValue, Int32.MaxValue, 9,Int32.MaxValue},
+                {Int32.MaxValue, Int32.MaxValue, Int32.MaxValue, 5, Int32.MaxValue, Int32.MaxValue, Int32.MaxValue, 17},
+                {Int32.MaxValue, Int32.MaxValue, Int32.MaxValue, 2, 9, Int32.MaxValue, Int32.MaxValue,17},
+                {Int32.MaxValue, Int32.MaxValue,Int32.MaxValue, 16, Int32.MaxValue, 17, 17, Int32.MaxValue}
             };
             kruskal(cost);
             
@@ -66,7 +69,9 @@ namespace Kruskal
 
         internal static partial class DefineConstants
         {
-            public const int V = 5;
+            public const int V = 8;
+
         }
     }
 }
+// Ответ: 38, верно
